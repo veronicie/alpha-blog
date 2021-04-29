@@ -4,55 +4,23 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-3 step process to add auth system functionality from the back-end.
+To add the route for the new user signup page and the rest of the restful routes separately, add the following two lines to your routes.rb file:
 
-Step 1) Add bcrypt gem:
+    get 'signup', to: 'users#new'
+    resources :users, except: [:new]
 
-In the Gemfile uncomment the line that lists the gem:
+The changes made in the video in addition to the routes above are listed below (reference the commit for the specific code):
 
-gem 'bcrypt', '~> 3.1.7'
+- Create users controller.
 
-Then run $ bundle install to install the gem in your app.
+- Add new action along with initiating a new user instance variable.
 
-Step 2) Add has_secure_password to your user model. Add the line below in your user.rb model file:
+- Create a users folder under app/views and add the new.html.erb template.
 
-has_secure_password
+- Add a form partial, _form.html.erb, in the same folder.
 
-Step 3) Create a migration file to add the password_digest column to the users table.
+- Update app/views/shared/_errors.html.erb and replace @article references with obj.
 
-    $ rails generate migration add_password_digest_to_users
+- Update app/views/articles/_form.html.erb and add obj: @article when rendering the errors partial.
 
-Then pull up the migration file and fill in the column details within the def change method:
-
-    add_column :users, :password_digest, :string
-
-Save the file and run $ rails db:migrate to make the change to the table
-
-You can test out the functionality from the console by adding passwords to a couple of your existing users and verifying them using the authenticate method. A sample progression of commands from the console could be like below:
-
-    user = User.last
-    user.password = "password123"
-    user.save
-
-The commands above will add the hashed version (with salt) of the string "password123" to the user's record.
-
-Then you can >>authenticate>> and test the password for the user like below:
-
-    user = User.last
-    user.authenticate("password123") # This, being the correct password will return the user object
-    user.authenticate("enterincorrectpassword") # This, being an incorrect password, will return false
-
-
-
-
-
->>We dont do that (its a has if we want to try it)
-    In console:
-    -> BCrypt::Password.create("password")
-    -> output: "$2a$12$OQd8axrj2FNIt3IabLdn1.lsLwzz4PNzqbOXNvAugqzM5hzXONCTW" 
-
-    Password:
-      password = BCrypt::Password.create("password")
-
-
-
+Test out the form by going to /signup page and ensure it shows up.

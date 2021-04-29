@@ -4,14 +4,14 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-To look for a specific keyword in search results from a command issued in the terminal, you can use the pipe operator followed by grep. In the video we looked for 'edit' from rails routes using the command below:
+To have a profile image associated with an email account you control, add one using the site en.gravatar.com. This will be the globally recognized avatar (gravatar for short) associated with that email address (this step is not necessary to get the functionality working in the app).
 
-$ rails routes --expanded | grep edit
+Summary of changes (actual ode can be found in the commit):
 
-Summary of the changes made to add the edit existing user functionality are listed below (check out the repo for specific code):
+- Add show action in users controller and a show.html.erb template under views/users.
 
-- Add the edit and update actions in users controller.
+- Add gravatar_for as a helper method in app/helpers/application_helper.rb file.
 
-- Add the edit.html.erb template under app/views/users folder.
+- Extract the articles listing code from views/articles/index.html.erb file and add it to an _article.html.erb partial within the same folder.
 
-- Update the form partial under app/views/users folder to accommodate different button text to display based on if the record being worked on is a new record (new template) or existing record (edit template).
+- Render this partial from both the show and index templates. Be sure to initiate the appropriate instance variable from the users show action.

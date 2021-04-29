@@ -19,7 +19,9 @@
       <%= f.password_field :password, class: "form-control", placeholder: "Choose a password" %>
     </div>
 
-    <button type="submit" class="btn btn-warning mt-4">Sign up</button>
+    <div class="mt-4">
+      <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-warning") %>
+    </div>
 
   <% end %>
 

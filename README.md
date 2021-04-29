@@ -4,12 +4,14 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Summary of changes made (refer to the commit link for specific code):
+To look for a specific keyword in search results from a command issued in the terminal, you can use the pipe operator followed by grep. In the video we looked for 'edit' from rails routes using the command below:
 
-- Add create action and user_params method in users controller.
+$ rails routes --expanded | grep edit
 
-- Update shared errors partial to display the appropriate class name (instead of hard-coded article).
+Summary of the changes made to add the edit existing user functionality are listed below (check out the repo for specific code):
 
-- Link the "Sign up!" button in the home page (app/views/pages/home.html.erb) to go to this new signup path.
+- Add the edit and update actions in users controller.
 
-You can test out the functionality by signing up a few users from the browser and then ensuring their presence in the users table (you can check this using the rails console).
+- Add the edit.html.erb template under app/views/users folder.
+
+- Update the form partial under app/views/users folder to accommodate different button text to display based on if the record being worked on is a new record (new template) or existing record (edit template).

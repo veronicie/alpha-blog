@@ -6,12 +6,8 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 Summary of changes:
 
-- Added require user method in application controller.
+- Added functionality for users to delete their own accounts using a destroy method in the users controller.
 
-- Added require same user private method in articles controller.
+- Added a link to delete account to the users' profile dropdown navigation option.
 
-- Used the two methods defined above as before_action methods in a few actions to restrict activities in the articles controller. 
-
-- Added require_same_user method to users controller.
-
-- Used require_same_user and require_user methods to restrict certain actions in the users controller.
+- Utilized a couple of existing methods (as before_action methods) to secure the newly created destroy action at controller level.

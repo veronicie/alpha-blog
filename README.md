@@ -6,14 +6,10 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 Summary of changes:
 
-- Added routes for login - new, create and destroy (to represent login form, logging in a user and logging out a user).
+- Added current_user and logged_in? helper methods.
 
-- Added a sessions controller with the new, create and destroy actions.
+- Modified the navigation partial and utilized these methods to display links based on logged in state.
 
-- Added a sessions folder under app/views and created a new.html.erb template to display the login form.
+- Modified the users controller create action so users' are logged in once they sign-up.
 
-- Added log in and log out links to navigation partial.
-
-
-MORE ABOUT SESSIONS:
-https://guides.rubyonrails.org/action_controller_overview.html#session
+- Added set_user method and used it as before_action for show, edit and update actions in users controller.

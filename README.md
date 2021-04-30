@@ -4,12 +4,10 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Summary of changes:
+Summary:
 
-- Added current_user and logged_in? helper methods.
+- Moved the current_user and logged_in? authentication methods from application helper to application controller and declared them as helper methods so they can be used in views as well.
 
-- Modified the navigation partial and utilized these methods to display links based on logged in state.
+- Updated the create action in articles controller so the logged in user is associated with the article being created instead of hardcoding the user.
 
-- Modified the users controller create action so users' are logged in once they sign-up.
-
-- Added set_user method and used it as before_action for show, edit and update actions in users controller.
+- Updated pages controller home action (root route) to redirect to articles index page if users are logged in.

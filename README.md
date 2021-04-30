@@ -6,8 +6,12 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 Summary of changes:
 
-- Added logged in and current user == article user based restrictions to articles/_article.html.erb partial, articles/show.html.erb, users/index.html.erb and users/show.html.erb.
+- Added require user method in application controller.
 
-- Restricted the new article creation option in the navigation menu to logged in users only.
+- Added require same user private method in articles controller.
 
-- Added a dropdown with users profile action links.
+- Used the two methods defined above as before_action methods in a few actions to restrict activities in the articles controller. 
+
+- Added require_same_user method to users controller.
+
+- Used require_same_user and require_user methods to restrict certain actions in the users controller.

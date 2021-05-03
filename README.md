@@ -4,10 +4,4 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Summary of changes:
-
-- Navigation partial updated to display "(Admin)" for admin user accounts.
-
-- Article actions (edit and delete) made available to admins for all articles in both for articles index (rendering article partial) and articles show views.
-
-- Added ability for admin users to delete other user accounts through the users index page.
+Summary: Embed ruby code in place of hard-coded 'success' in the messages partial. 'success' is returned if the key ('name') from the flash hash is 'notice' and 'danger' is returned otherwise. This gives the alert message the green or red color depending on the notice type. 

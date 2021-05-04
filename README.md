@@ -4,17 +4,13 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Categories controller and tests
+Create category
 
 
 Summary of changes:
 
-- Generated a functional categories controller test file using the following command: 
+- Added functional test for create action.
 
-rails generate test_unit:scaffold category
+- Added the new category creation form.
 
-- Modified the file to only test for new, index and show urls for now.
-
-- Added the actions and templates so the tests pass, and in turn have the new, show and index templates ready to go.
-
-Run tests: rails test test/controllers/categories_controller_test.rb
+- Completed/added new and create actions in categories controller along with category_params private method.

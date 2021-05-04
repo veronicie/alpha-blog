@@ -4,9 +4,13 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Integration test for invalid category
+Integration test and feature: listing categories
 
 
 Summary of changes:
 
-- Added integration test to test for invalid submissions made during the category creation process.
+- Added list categories integration test.
+
+- Completed categories index action with pagination.
+
+- Added categories index view.

@@ -9,8 +9,7 @@ Create category
 
 Summary of changes:
 
-- Added functional test for create action.
+- Added create category integration test to test for the whole business process of creating a category (all steps involved up until this point).
+    Run: rails generate integration_test create_category
 
-- Added the new category creation form.
-
-- Completed/added new and create actions in categories controller along with category_params private method.
+- Added some code to the show action/view to make the test pass.

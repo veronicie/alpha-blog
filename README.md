@@ -4,11 +4,17 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Validations using unit tests
+Categories controller and tests
 
 
 Summary of changes:
 
-- Added unit tests for various category model validation specs.
+- Generated a functional categories controller test file using the following command: 
 
-- Added validations to the category model to make the tests pass.
+rails generate test_unit:scaffold category
+
+- Modified the file to only test for new, index and show urls for now.
+
+- Added the actions and templates so the tests pass, and in turn have the new, show and index templates ready to go.
+
+Run tests: rails test test/controllers/categories_controller_test.rb

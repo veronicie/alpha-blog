@@ -4,10 +4,10 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Add association from UI
+Update article views
 
 Summary of changes:
 
-- White-list category ids in article_params method of the articles controller.
+- Added _category.html.erb partial to views/categories folder.
 
-- Add select box for categories to _form.html.erb (form partial) used for articles (views/articles/_form.html.erb).
+- Added category display to article partial and articles show view by rendering the category partial.@

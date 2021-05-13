@@ -4,12 +4,14 @@ Homework for The Complete Ruby on Rails Deveoper Course (69).
 
 -----------
 
-Complete category index and show
+Edit categories
 
 Summary of changes:
 
-- Added display of number of articles associated with each category in the categories index listing.
+- Added edit and update actions to categories controller.
 
-- Completed categories show view by using code from users/show view as starting template.
+- Added edit.html.erb view template.
 
-- Initiated @articles instance variable in categories controller show action to capture all articles associated with a specific category.
+- Added _form.html.erb partial under categories and extracted errors/form code from new.html.erb and added this partial.
+
+- Render form partial from both new and edit view templates.
